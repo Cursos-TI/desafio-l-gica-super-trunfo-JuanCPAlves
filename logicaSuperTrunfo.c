@@ -11,6 +11,7 @@ int main() {
     float pib1, pib2;
     int tur1, tur2;
 
+      // Menu interativo
     printf("  *** Menu Principal ***\n\n");
     printf("1. Iniciar Jogo\n");
     printf("2. Regras\n");
@@ -103,6 +104,7 @@ int main() {
     printf("  População:\n");
     printf("Carta 1 - %s: %u\n", nomecidade1, populaçao1);
     printf("Carta 2 - %s: %u\n", nomecidade2, populaçao2);
+    
     if (populaçao1 > populaçao2)
     {
         printf("Carta 1 (%s) venceu!\n\n", nomecidade1);
@@ -132,6 +134,7 @@ int main() {
     printf("  PIB:\n");
     printf("Carta 1 - %s: %.2f\n", nomecidade1, pib1);
     printf("Carta 2 - %s: %.2f\n", nomecidade2, pib2);
+
     if (pib1 > pib2){
 
         printf("Carta 1 (%s) venceu!\n\n", nomecidade1);
@@ -146,6 +149,7 @@ int main() {
     printf("  Pontos Turísticos:\n");
     printf("Carta 1 - %s: %d\n", nomecidade1, tur1);
     printf("Carta 2 - %s: %d\n", nomecidade2, tur2);
+
     if (tur1 > tur2)
     {
         printf("Carta 1 (%s) venceu!\n\n", nomecidade1);
@@ -160,6 +164,7 @@ int main() {
     printf("  Densidade Populacional:\n");
     printf("Carta 1 - %s: %.2f\n", nomecidade1, densid1);
     printf("Carta 2 - %s: %.2f\n", nomecidade2, densid2);
+
     if ((1 / densid1) > (1 / densid2))
     {
         printf("Carta 1 (%s) venceu!\n\n", nomecidade1);
@@ -174,6 +179,7 @@ int main() {
     printf("  PIB per Capita:\n");
     printf("Carta 1 - %s: %.2f\n", nomecidade1, PIBpc1);
     printf("Carta 2 - %s: %.2f\n", nomecidade2, PIBpc2);
+
     if (PIBpc1 > PIBpc2)
     {
         printf("Carta 1 (%s) venceu!\n\n", nomecidade1);
@@ -188,6 +194,7 @@ int main() {
     printf("  Super Poder:\n");
     printf("Carta 1 - %s: %.2f\n", nomecidade1, superpoder1);
     printf("Carta 2 - %s: %.2f\n", nomecidade2, superpoder2);
+
     if (superpoder1 > superpoder2)
     {
         printf("Carta 1 (%s) venceu!\n\n", nomecidade1);
