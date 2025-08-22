@@ -2,6 +2,7 @@
 
 int main() {
     //Criação de variáveis
+    int opçao;
     char estado1[10], estado2[10];
     char codigocarta1[10], codigocarta2[10];
     char nomecidade1[51], nomecidade2[51];
@@ -10,9 +11,17 @@ int main() {
     float pib1, pib2;
     int tur1, tur2;
 
-    
-    
-    //Criação da primeira carta do jogo.
+    printf("  *** Menu Principal ***\n\n");
+    printf("1. Iniciar Jogo\n");
+    printf("2. Regras\n");
+    printf("3. Sair\n\n");
+    printf("Escolha: ");
+    scanf("%d", &opçao);
+
+    switch (opçao)
+    {
+    case 1:
+        //Criação da primeira carta do jogo.
     printf("Cadastro de cartas(1)\n\nEstado: ");
     scanf("%s", estado1);
 
@@ -98,9 +107,11 @@ int main() {
     {
         printf("Carta 1 (%s) venceu!\n\n", nomecidade1);
     }
-    else
+    else if (populaçao1 < populaçao2)
     {
-        printf("Carta 2 (%s) venceu!\n\n", nomecidade2);
+        printf("Carta 2 (%s) venceu!\n\n", nomecidade2); 
+    } else {
+        printf("### Empate! ###\n\n");
     }
 
     printf("  Área:\n");
@@ -111,9 +122,11 @@ int main() {
     {
          printf("Carta 1 (%s) venceu!\n\n", nomecidade1);
     }
-    else
+    else if (area1 < area2)
     {
-         printf("Carta 2 (%s) venceu!\n\n", nomecidade2);
+        printf("Carta 2 (%s) venceu!\n\n", nomecidade2); 
+    } else {
+        printf("### Empate! ###\n\n");
     }
 
     printf("  PIB:\n");
@@ -123,9 +136,11 @@ int main() {
 
         printf("Carta 1 (%s) venceu!\n\n", nomecidade1);
     }
-    else
+    else if (pib1 < pib2)
     {
         printf("Carta 2 (%s) venceu!\n\n", nomecidade2); 
+    } else {
+        printf("### Empate! ###\n\n");
     }
     
     printf("  Pontos Turísticos:\n");
@@ -135,9 +150,11 @@ int main() {
     {
         printf("Carta 1 (%s) venceu!\n\n", nomecidade1);
     }
-    else
+    else if (tur1 < tur2)
     {
-        printf("Carta 2 (%s) venceu!\n\n", nomecidade2);
+        printf("Carta 2 (%s) venceu!\n\n", nomecidade2); 
+    } else {
+        printf("### Empate! ###\n\n");
     }
 
     printf("  Densidade Populacional:\n");
@@ -147,9 +164,11 @@ int main() {
     {
         printf("Carta 1 (%s) venceu!\n\n", nomecidade1);
     }
-    else
+    else if ((1 / densid1) < (1 / densid2))
     {
-        printf("Carta 2 (%s) venceu!\n\n", nomecidade2);
+        printf("Carta 2 (%s) venceu!\n\n", nomecidade2); 
+    } else {
+        printf("### Empate! ###\n\n");
     }
 
     printf("  PIB per Capita:\n");
@@ -159,9 +178,11 @@ int main() {
     {
         printf("Carta 1 (%s) venceu!\n\n", nomecidade1);
     }
-    else
+    else if (PIBpc1 < PIBpc2)
     {
-        printf("Carta 2 (%s) venceu!\n\n", nomecidade2);
+        printf("Carta 2 (%s) venceu!\n\n", nomecidade2); 
+    } else {
+        printf("### Empate! ###\n\n");
     }
 
     printf("  Super Poder:\n");
@@ -171,10 +192,30 @@ int main() {
     {
         printf("Carta 1 (%s) venceu!\n\n", nomecidade1);
     }
-    else
+    else if (superpoder1 < superpoder2)
     {
-        printf("Carta 2 (%s) venceu!\n\n", nomecidade2);
+        printf("Carta 2 (%s) venceu!\n\n", nomecidade2); 
+    } else {
+        printf("### Empate! ###\n\n");
     }
+        break;
+
+    case 2:
+        printf("Regras do jogo:\n.......\n....... \n\n"); 
+        break;
+    
+    case 3:
+        printf("Saindo do jogo...\n");
+        break;
+    
+    default: 
+        printf("Opção inválida!");
+        break;
+    }
+
+    
+    
+    
 
 
     return 0;
